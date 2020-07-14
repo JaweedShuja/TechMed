@@ -1,0 +1,8 @@
+export const Blue = "#6E78F7"
+export const Green = "#28d4b5"
+export const GrayDark = "#313450"
+export const GrayMedium = "#898A8F"
+export const GrayLight = "#94A5A6"
+export const WhiteSmoke = "#F5F5F5"
+export const White = "#FFFFFF"
+export const GrayDim = "#c7cfd0"

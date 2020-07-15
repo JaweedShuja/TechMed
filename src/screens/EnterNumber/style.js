@@ -44,17 +44,22 @@ export default StyleSheet.create({
     margin: 20,
     tintColor: Colors.GrayMedium,
   },
+  idcardIcon: {
+    height: 75,
+    width: 120,
+    alignSelf: 'center',
+  },
   instructionText: {
     alignSelf: 'center',
     fontFamily: Fonts.SemiBold,
     color: Colors.GrayLight,
   },
   enterNumberContainer: {
-    height: 150,
+    flex: 1,
     width: '80%',
     backgroundColor: Colors.White,
     alignSelf: 'center',
-    margin: 10,
+    margin: 20,
     borderRadius: 10,
     shadowColor: '#000',
     shadowOffset: {
@@ -70,7 +75,26 @@ export default StyleSheet.create({
     flexDirection: 'row',
     height: 40,
     marginHorizontal: 20,
-    alignSelf: 'center',
+  },
+  codeContainer: {
+    flex: 1,
+    borderWidth: 1,
+    borderColor: Colors.GrayDim,
+    borderRadius: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  textInputContainer: {
+    flex: 4,
+    borderWidth: 1,
+    borderColor: Colors.GrayDim,
+    borderRadius: 10,
+    marginLeft: 10,
+    justifyContent: 'center',
+    marginLeft: 10,
+  },
+  codeText: {
+    fontFamily: Fonts.SemiBold,
   },
   submitButton: {
     height: 45,
@@ -85,45 +109,8 @@ export default StyleSheet.create({
     color: Colors.White,
     fontFamily: Fonts.SemiBold,
   },
-  enterCodeContainer: {
-    alignSelf: 'center',
-  },
-  enterCodeText: {
+  textInputNumber: {
+    marginLeft: 10,
     fontFamily: Fonts.SemiBold,
-    alignSelf: 'center',
-  },
-  enterCodeDotContainer: {
-    flexDirection: 'row',
-  },
-  enterCodeDot: {
-    height: 7,
-    width: 7,
-    backgroundColor: Colors.Blue,
-    borderRadius: 70,
-    margin: 5,
-  },
-  singleCodeContainer: {
-    width: 40,
-    borderBottomWidth: 1,
-    borderColor: Colors.GrayMedium,
-    margin: 5,
-  },
-  resendCodeContainer: {
-    flex: 1,
-    justifyContent: 'space-around',
-    marginBottom: 10,
-  },
-  resendCodeText: {
-    fontFamily: Fonts.SemiBold,
-    alignSelf: 'center',
-  },
-  resendButtonContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    marginHorizontal: 50,
-  },
-  resendButtonText: {
-    fontFamily: Fonts.SemiBold,
-    color: Colors.Blue,
   },
 });

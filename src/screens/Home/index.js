@@ -3,6 +3,8 @@ import {View, Text, Image, FlatList, ScrollView} from 'react-native';
 import styles from './style';
 import * as Colors from '../../res/values/colors';
 import GeneralStatusBarColor from '../../components/GeneralStatusBarColor';
+import NavBar from '../../components/NavBar';
+
 import DownIcon from '../../res/images/downIcon.png';
 import Doctors from '../../res/images/doctors.jpg';
 import DoctorCapIcon from '../../res/images/doctorCapIcon.png';
@@ -109,39 +111,11 @@ export default function Home() {
           <Text style={styles.nearByText}>Doctors nearby you</Text>
           <Text style={styles.seeAllText}>See All</Text>
         </View>
-        {/* <FlatList
-          horizontal
-          data={doctorsData}
-          keyExtractor={doctorsData => doctorsData.id}
-          renderItem={({item}) => {
-            return <Text>{item.name}</Text>;
-          }}
-        /> */}
         <ScrollView horizontal={true}>{doctorsView}</ScrollView>
       </View>
-      <View style={styles.bottomNav}>
-        <View style={styles.navTap}>
-          <Image
-            source={HomeIcon}
-            style={[styles.navImage, {tintColor: Colors.Blue}]}
-          />
-          <Text style={[styles.navText, {color: Colors.GrayDark}]}>Home</Text>
-        </View>
-        <View style={styles.navTap}>
-          <Image
-            source={ChatIcon}
-            style={[styles.navImage, {tintColor: Colors.GrayDim}]}
-          />
-          <Text style={[styles.navText, {color: Colors.GrayDim}]}>Chat</Text>
-        </View>
-        <View style={styles.navTap}>
-          <Image
-            source={UserIcon}
-            style={[styles.navImage, {tintColor: Colors.GrayDim}]}
-          />
-          <Text style={[styles.navText, {color: Colors.GrayDim}]}>Account</Text>
-        </View>
-      </View>
+      <NavBar
+        nav={{nav1: Colors.Blue, nav2: Colors.GrayDim, nav3: Colors.GrayDim}}
+      />
     </View>
   );
 }

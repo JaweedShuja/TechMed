@@ -98,30 +98,7 @@ export default StyleSheet.create({
     height: 45,
     width: 50,
   },
-  bottomNav: {
-    height: 60,
-    width: '100%',
-    backgroundColor: 'white',
-    position: 'absolute',
-    bottom: 0,
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    alignItems: 'center',
-  },
-  navTap: {
-    height: 50,
-    width: 70,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  navImage: {
-    height: 20,
-    width: 20,
-  },
-  navText: {
-    fontFamily: Fonts.SemiBold,
-    fontSize: 12,
-  },
+
   nearByDoctorsContainer: {
     flex: 1,
     marginBottom: 70,

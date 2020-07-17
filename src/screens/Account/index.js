@@ -8,7 +8,7 @@ import UserIcon from '../../res/images/userIcon.png';
 import SettingsIcon from '../../res/images/settingsIcon.png';
 import DoctorImage from '../../res/images/doctorImage.png';
 import ForwardIcon from '../../res/images/forwardIcon.webp';
-import {Icon} from 'react-native-elements';
+// import {Icon} from 'react-native-elements';
 
 export default function Account() {
   const [optionItems, setOptionItems] = useState([
@@ -52,8 +52,8 @@ export default function Account() {
           data={optionItems}
           renderItem={({item}) => (
             <View style={styles.optionContainer}>
-              {/* <Image source={UserIcon} style={styles.optionImage} /> */}
-              <Icon name="rowing" />
+              <Image source={UserIcon} style={styles.optionImage} />
+              {/* <Icon name="sc-telegram" type="evilicon" color="#517fa4" /> */}
               <Text style={styles.optionText}>{item.name}</Text>
               <Image source={ForwardIcon} style={styles.forwardIcon} />
             </View>

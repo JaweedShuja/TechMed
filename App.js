@@ -7,10 +7,11 @@ import EnterNumber from './src/screens/EnterNumber';
 import EnterCode from './src/screens/EnterCode';
 import Home from './src/screens/Home';
 import Account from './src/screens/Account';
+import Profile from './src/screens/Profile';
 
 class App extends Component {
   render() {
-    return <Account />;
+    return <Profile />;
   }
 }
 

@@ -8,10 +8,12 @@ import EnterCode from './src/screens/EnterCode';
 import Home from './src/screens/Home';
 import Account from './src/screens/Account';
 import Profile from './src/screens/Profile';
+import SearchDoctor from './src/screens/SearchDoctor';
+import Specialities from './src/screens/Specialities';
 
 class App extends Component {
   render() {
-    return <Profile />;
+    return <Specialities />;
   }
 }
 

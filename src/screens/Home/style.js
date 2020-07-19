@@ -166,5 +166,6 @@ export default StyleSheet.create({
     color: Colors.GrayDark,
     marginTop: 5,
     marginLeft: 5,
+      
   },
 });

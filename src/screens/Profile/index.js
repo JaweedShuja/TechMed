@@ -12,6 +12,7 @@ import Hospital5 from '../../res/images/hospital5.jpeg';
 import Map from '../../res/images/map.jpeg';
 import * as Colors from '../../res/values/colors';
 import * as Fonts from '../../res/values/fonts';
+import BookButton from '../../components/BookButton';
 
 let Hospitals = [Hospital1, Hospital2, Hospital3, Hospital4, Hospital5];
 
@@ -198,14 +199,15 @@ export default function Profile() {
           <View style={{height: 100}}></View>
         </ScrollView>
       </View>
-      <View style={styles.bottomButtonContainer}>
+      {/* <View style={styles.bottomButtonContainer}>
         <TouchableOpacity style={styles.bookButton}>
           <Text style={styles.bookText}>Book</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.feedBackConatainer}>
           <Text style={styles.feedbackText}>Give Feedback</Text>
         </TouchableOpacity>
-      </View>
+      </View> */}
+      <BookButton/>
     </View>
   );
 }

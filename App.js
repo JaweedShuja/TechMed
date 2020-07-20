@@ -10,10 +10,15 @@ import Account from './src/screens/Account';
 import Profile from './src/screens/Profile';
 import SearchDoctor from './src/screens/SearchDoctor';
 import Specialities from './src/screens/Specialities';
+import TimeSlot from './src/screens/TimeSlot';
+import Introduction1 from './src/screens/Introduction1';
+import Introduction2 from './src/screens/Introduction2';
+import Introduction3 from './src/screens/Introduction3';
+import Estimation from './src/screens/Estimation';
 
 class App extends Component {
   render() {
-    return <Specialities />;
+    return <Estimation />;
   }
 }
 

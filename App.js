@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {View, Text} from 'react-native';
+
 import Splash from './src/screens/Splash';
 import SelectCity from './src/screens/SelectCity';
 import SignUp from './src/screens/SignUp';
@@ -15,10 +16,11 @@ import Introduction1 from './src/screens/Introduction1';
 import Introduction2 from './src/screens/Introduction2';
 import Introduction3 from './src/screens/Introduction3';
 import Estimation from './src/screens/Estimation';
+import Test from './test.js';
 
 class App extends Component {
   render() {
-    return <Estimation />;
+    return <Test />;
   }
 }
 

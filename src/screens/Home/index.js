@@ -55,7 +55,7 @@ for (let i = 0; i < doctorsData.length; i++) {
       <View style={styles.ratingContainer}>
         <Image style={styles.starIcon} source={StarIcon} />
         <Text style={styles.doctorRating}>{doctorsData[i].rating}</Text>
-      </View>    
+      </View>
     </View>,
   );
 }
@@ -111,7 +111,9 @@ export default function Home() {
           <Text style={styles.nearByText}>Doctors nearby you</Text>
           <Text style={styles.seeAllText}>See All</Text>
         </View>
-        <ScrollView horizontal={true}>{doctorsView}</ScrollView>
+        <ScrollView showsHorizontalScrollIndicator={false} horizontal={true}>
+          {doctorsView}
+        </ScrollView>
       </View>
       <NavBar
         nav={{nav1: Colors.Blue, nav2: Colors.GrayDim, nav3: Colors.GrayDim}}

@@ -56,7 +56,7 @@ for (let i = 0; i < doctorsData.length; i++) {
         <Image style={styles.starIcon} source={StarIcon} />
         <Text style={styles.doctorRating}>{doctorsData[i].rating}</Text>
       </View>
-    </View>,
+    </View>        
   );
 }
 export default function Home() {

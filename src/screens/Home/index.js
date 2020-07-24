@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, Text, Image, FlatList, ScrollView} from 'react-native';
+import {View, Text, Image, TouchableOpacity, ScrollView} from 'react-native';
 import styles from './style';
 import * as Colors from '../../res/values/colors';
 import GeneralStatusBarColor from '../../components/GeneralStatusBarColor';
@@ -48,7 +48,7 @@ let doctorsData = [
 let doctorsView = [];
 for (let i = 0; i < doctorsData.length; i++) {
   doctorsView.push(
-    <View style={styles.doctorContainer}>
+    <View style={styles.doctorContainer} key={doctorsData[i].id}>
       <Image style={styles.doctorImage} source={DoctorImage} />
       <Text style={styles.doctorName}>{doctorsData[i].name}</Text>
       <Text style={styles.doctorDesc}>{doctorsData[i].desc}</Text>
@@ -56,7 +56,7 @@ for (let i = 0; i < doctorsData.length; i++) {
         <Image style={styles.starIcon} source={StarIcon} />
         <Text style={styles.doctorRating}>{doctorsData[i].rating}</Text>
       </View>
-    </View>        
+    </View>,
   );
 }
 export default function Home() {
@@ -76,15 +76,15 @@ export default function Home() {
           </View>
         </View>
         <View style={styles.roungIconContainer}>
-          <View style={styles.round}>
+          <TouchableOpacity style={styles.round}>
             <Image source={DoctorCapIcon} style={styles.roundImage} />
-          </View>
-          <View style={styles.round}>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.round}>
             <Image source={MedicinesIcon} style={styles.roundImage} />
-          </View>
-          <View style={styles.round}>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.round}>
             <Image source={DigonosticIcon} style={styles.roundImage} />
-          </View>
+          </TouchableOpacity>
         </View>
       </View>
       <View style={styles.roundTextContainer}>

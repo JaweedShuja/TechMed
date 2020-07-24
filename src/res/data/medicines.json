@@ -1,0 +1,37 @@
+[
+  {
+    "id": "1",
+    "ProductName": "chlorphenamine",
+    "Power": "4mg",
+    "Formula": "hydrogen  maleate", 
+    "Price": "100"
+  },
+  {
+    "id": "2",
+    "ProductName": "dexamethasone",
+    "Power": "4 mg",
+    "Formula": "dexamethasone  phosphate ",
+    "Price": "120"
+  },
+  {
+    "id": "3",
+    "ProductName": "epinephrine  (adrenaline)",
+    "Power": "1mg",
+    "Formula": "hydrochloride",
+    "Price": "80"
+  },
+  {
+    "id": "4",
+    "ProductName": "hydrocortisone",
+    "Power": "100mg",
+    "Formula": "sodium  succinate",
+    "Price": "95"
+  },
+  {
+    "id": "5",
+    "ProductName": "prednisolone",
+    "Power": "25  mg",
+    "Formula": "dexamethasone",
+    "Price": "70"
+  }
+]

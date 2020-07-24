@@ -16,11 +16,12 @@ import Introduction1 from './src/screens/Introduction1';
 import Introduction2 from './src/screens/Introduction2';
 import Introduction3 from './src/screens/Introduction3';
 import Estimation from './src/screens/Estimation';
+import AllMedicines from './src/screens/AllMedicines';
 import Test from './test.js';
 
 class App extends Component {
   render() {
-    return <Test />;
+    return <AllMedicines />;
   }
 }
 

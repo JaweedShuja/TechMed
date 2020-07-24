@@ -49,7 +49,7 @@ export default class test extends React.Component {
           style={{
             height: 300,
             width: this.state.width,
-            backgroundColor: 'red',
+            backgroundColor: 'blue',
             position: 'absolute',
             marginTop: 100,
           }}>

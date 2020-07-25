@@ -6,7 +6,7 @@ import Medicine1 from '../res/images/medicine1.png';
 import * as Colors from '../res/values/colors';
 import * as Fonts from '../res/values/fonts';
 
-const MedicineModal = ({close, id, add, count}) => {
+const MedicineModal = ({close, id, setCartItems, cartItems}) => {
   var result = medicines.filter(obj => {
     return obj.id === id;
   });
@@ -122,8 +122,8 @@ const MedicineModal = ({close, id, add, count}) => {
             alignItems: 'center',
             justifyContent: 'center',
           }}
-          onPress={() => {
-            add(count + 1);
+          onPress={async () => {
+            await setCartItems([...cartItems, {id: id, qty: 1}]);
             close(false);
           }}>
           <Text style={{fontFamily: Fonts.SemiBold, color: Colors.White}}>

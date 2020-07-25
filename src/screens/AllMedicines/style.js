@@ -73,7 +73,7 @@ export default StyleSheet.create({
     height: 30,
     width: 30,
     tintColor: Colors.GrayMedium,
-    marginLeft: 5,
+    marginLeft: 10,
   },
   searchBar: {
     // backgroundColor: 'red',
@@ -105,18 +105,17 @@ export default StyleSheet.create({
     margin: 10,
   },
   medicineDetailsContainer: {
-    justifyContent: 'space-between',
     marginVertical: 10,
     flex: 1,
+    justifyContent: 'space-around',
   },
   medicineName: {
     fontFamily: Fonts.SemiBold,
     marginLeft: 20,
   },
   detailsChildContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
     marginHorizontal: 20,
+    flexDirection: 'row',
   },
   powerHeading: {
     fontFamily: Fonts.SemiBold,
@@ -127,11 +126,9 @@ export default StyleSheet.create({
     fontFamily: Fonts.Regular,
     color: Colors.GrayDark,
     fontSize: 12,
+    marginLeft: 5,
   },
   priceContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
     marginHorizontal: 20,
   },
   price: {
@@ -161,13 +158,21 @@ export default StyleSheet.create({
     marginLeft: 5,
   },
   addToCartButton: {
-    backgroundColor: Colors.Blue,
-    padding: 5,
-    borderRadius: 5,
+    height: 30,
+    width: 100,
+    borderWidth: 1,
+    borderColor: Colors.Blue,
+    borderRadius: 30,
+    alignItems: 'center',
+    justifyContent: 'center',
+    position: 'absolute',
+    bottom: 0,
+    right: 0,
+    margin: 10,
   },
   addToCartText: {
-    color: Colors.White,
-    fontFamily: Fonts.SemiBold,
+    color: Colors.GrayDark,
+    fontFamily: Fonts.Regular,
     fontSize: 12,
   },
 });

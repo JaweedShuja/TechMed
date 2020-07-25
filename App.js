@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
-import {View, Text} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
+import {createAppContainer} from 'react-navigation';
+import {createStackNavigator} from 'react-navigation-stack';
 
 import Splash from './src/screens/Splash';
 import SelectCity from './src/screens/SelectCity';
@@ -17,12 +19,32 @@ import Introduction2 from './src/screens/Introduction2';
 import Introduction3 from './src/screens/Introduction3';
 import Estimation from './src/screens/Estimation';
 import AllMedicines from './src/screens/AllMedicines';
-import Test from './test.js';
+import Cart from './src/screens/Cart';
 
-class App extends Component {
+const RootStack = createStackNavigator(
+  {
+    AllMedicines: {
+      screen: AllMedicines,
+    },
+    Cart: {
+      screen: Cart,
+    },
+  },
+  {
+    initialRouteName: 'AllMedicines',
+  },
+  {
+    headerMode: 'none',
+    navigationOptions: {
+      headerVisible: false,
+    },
+  },
+);
+
+class App extends React.Component {
   render() {
-    return <AllMedicines />;
+    return <RootStack />;
   }
 }
 
-export default App;
+export default createAppContainer(RootStack);

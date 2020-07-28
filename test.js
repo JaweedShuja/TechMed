@@ -1,65 +1,45 @@
-import React from 'react';
-import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
+import React, {useState} from 'react';
 
-export default class test extends React.Component {
-  constructor(props) {
-    super(props);
-    //0 open
-    //1 close
-    this.state = {
-      width: 0,
-      check: 0,
-    };
-    this.open = this.open.bind(this);
-  }
-  open() {
-    if (this.state.check == 0) {
-      this.setState({
-        check: 1,
-      });
-      var t = setInterval(() => {
-        this.setState({
-          width: this.state.width + 20,
-        });
-        if (this.state.width >= 200) {
-          clearInterval(t);
-        }
-      }, 10);
-    } else if (this.state.check == 1) {
-      this.setState({check: 0});
-      var t = setInterval(() => {
-        this.setState({
-          width: this.state.width - 20,
-        });
-        if (this.state.width <= 0) {
-          clearInterval(t);
-        }
-      }, 10);
-    }
-  }
-  render() {
+import {View, Text, TouchableOpacity} from 'react-native';
+
+function Test() {
+  const [selectedScreen, setSelectedScreen] = useState('one');
+  if (selectedScreen == 'one') {
     return (
       <View>
+        <Text>this is screen 1</Text>
         <TouchableOpacity
-          onPress={() => this.open()}
-          style={{backgroundColor: 'lightblue', padding: 10, width: 100}}>
-          <Text>Open Slider</Text>
-        </TouchableOpacity>
-        <View
           style={{
-            height: 300,
-            width: this.state.width,
-            backgroundColor: 'blue',
-            position: 'absolute',
-            marginTop: 100,
-          }}>
-          <TouchableOpacity
-            onPress={() => this.open()}
-            style={{backgroundColor: 'lightblue', padding: 10, width: 100}}>
-            <Text>close</Text>
-          </TouchableOpacity>
-        </View>
+            height: 50,
+            width: 50,
+            backgroundColor: 'red',
+          }}
+          onPress={() => {
+            console.log(selectedScreen);
+            setSelectedScreen('two');
+          }}></TouchableOpacity>
+      </View>
+    );
+  } else if (selectedScreen == 'two') {
+    return (
+      <View>
+        <Text>this is screen 2</Text>
+        <TouchableOpacity
+          style={{
+            height: 50,
+            width: 50,
+            backgroundColor: 'red',
+          }}
+          onPress={() => {
+            console.log(selectedScreen);
+            setSelectedScreen('one');
+          }}></TouchableOpacity>
       </View>
     );
   }
 }
+export default Test;
+
+Test.navigationOptions = {
+  headerShown: false,
+};

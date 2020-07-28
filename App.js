@@ -20,6 +20,7 @@ import Introduction3 from './src/screens/Introduction3';
 import Estimation from './src/screens/Estimation';
 import AllMedicines from './src/screens/AllMedicines';
 import Cart from './src/screens/Cart';
+import Test from './test.js';
 
 const RootStack = createStackNavigator(
   {
@@ -28,6 +29,12 @@ const RootStack = createStackNavigator(
     },
     Cart: {
       screen: Cart,
+    },
+    SelectCity: {
+      screen: SelectCity,
+    },
+    Test: {
+      screen: Test,
     },
   },
   {

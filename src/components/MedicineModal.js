@@ -6,11 +6,11 @@ import Medicine1 from '../res/images/medicine1.png';
 import * as Colors from '../res/values/colors';
 import * as Fonts from '../res/values/fonts';
 
-const MedicineModal = ({close, id, setCartItems, cartItems}) => {
+const MedicineModal = ({close, id, setCartItems, cartItems, price}) => {
   var result = medicines.filter(obj => {
     return obj.id === id;
   });
-  console.log(result[0].ProductName);
+  //console.log(result[0].ProductName);
   return (
     <View style={styles.container}>
       <View style={styles.modalContainer}>
@@ -123,7 +123,10 @@ const MedicineModal = ({close, id, setCartItems, cartItems}) => {
             justifyContent: 'center',
           }}
           onPress={async () => {
-            await setCartItems([...cartItems, {id: id, qty: 1}]);
+            await setCartItems([
+              ...cartItems,
+              {id: id, qty: 1, price: parseInt(price)},
+            ]);
             close(false);
           }}>
           <Text style={{fontFamily: Fonts.SemiBold, color: Colors.White}}>

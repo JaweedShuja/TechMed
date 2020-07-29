@@ -118,6 +118,6 @@ export default function Home() {
       <NavBar
         nav={{nav1: Colors.Blue, nav2: Colors.GrayDim, nav3: Colors.GrayDim}}
       />
-    </View>
+    </View>      
   );
 }

@@ -21,6 +21,7 @@ import Estimation from './src/screens/Estimation';
 import AllMedicines from './src/screens/AllMedicines';
 import Cart from './src/screens/Cart';
 import Test from './test.js';
+import FacebookProfile from './src/screens/FacebookProfile';
 
 const RootStack = createStackNavigator(
   {
@@ -36,9 +37,13 @@ const RootStack = createStackNavigator(
     Test: {
       screen: Test,
     },
+    FacebookProfile: {
+      screen: FacebookProfile,
+    },
   },
+
   {
-    initialRouteName: 'AllMedicines',
+    initialRouteName: 'FacebookProfile',
   },
   {
     headerMode: 'none',

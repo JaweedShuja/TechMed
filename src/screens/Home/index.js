@@ -91,7 +91,7 @@ export default function Home() {
         <View style={styles.textContainer}>
           <Text style={styles.mainText}>Doctor</Text>
           <Text style={styles.desText}>Search doctor around you</Text>
-        </View>
+        </View>     
         <View style={styles.textContainer}>
           <Text style={styles.mainText}>Medicines</Text>
           <Text style={styles.desText}>Order medicines to home</Text>
